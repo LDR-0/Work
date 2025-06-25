@@ -15,7 +15,6 @@ if uploaded_file:
     data = []
     for line in lines:
         line = line.strip().replace(",", ".")
-        # Ищем числа с научной нотацией или обычные
         matches = re.findall(r"[+-]?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?", line)
         if len(matches) >= 2:
             try:
